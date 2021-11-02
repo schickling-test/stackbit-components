@@ -1,0 +1,104 @@
+type: object
+name: MediaGallerySection
+label: Media gallery section
+labelField: title
+extends:
+  - Section
+groups:
+  - sectionComponent
+fieldGroups:
+  - name: styles
+    label: Styles
+  - name: settings
+    label: Settings
+fields:
+  - name: colors
+    default: colors-h
+  - name: backgroundWidth
+    default: full
+  - type: string
+    name: title
+    label: Title
+  - type: string
+    name: subtitle
+    label: Subtitle
+  - type: list
+    name: actions
+    label: Actions
+    items:
+      type: model
+      models:
+        - Button
+        - Link
+    default:
+      - type: Button
+        label: Get Started
+        url: '/'
+        style: primary
+        elementId: hero-main-button
+      - type: Button
+        label: Learn More
+        url: '/'
+        style: secondary
+  - type: list
+    name: items
+    label: Items
+    items:
+      type: model
+      models:
+        - ImageBlock
+        - VideoBlock
+    default:
+      - type: ImageBlock
+        url: /images/post-1.jpeg
+        altText: Media gallery image
+      - type: ImageBlock
+        url: /images/post-2.jpeg
+        altText: Media gallery image
+      - type: ImageBlock
+        url: /images/post-3.jpeg
+        altText: Media gallery image
+  - type: number
+    name: columnCount
+    group: styles
+    label: Columns
+    controlType: slider
+    min: 1
+    max: 6
+    step: 1
+    unit: ''
+    default: 3
+  - type: style
+    name: styles
+    styles:
+      self:
+        height: ['auto', 'screen']
+        width: ['narrow', 'wide', 'full']
+        margin: ['twt0:36', 'twb0:36']
+        padding: ['twt0:36', 'twb0:36']
+        alignItems: ['flex-start', 'flex-end', 'center']
+        justifyContent: ['flex-start', 'flex-end', 'center']
+      title:
+        fontWeight: ['400', '700']
+        fontStyle: ['normal', 'italic']
+        textAlign: ['left', 'center', 'right']
+      subtitle:
+        fontWeight: ['400', '700']
+        fontStyle: ['normal', 'italic']
+        textAlign: ['left', 'center', 'right']
+    default:
+      self:
+        height: auto
+        width: wide
+        margin: ['mt-0', 'mb-0']
+        padding: ['pt-12', 'pb-12']
+        alignItems: center
+        justifyContent: center
+      title:
+        fontWeight: 700
+        fontStyle: normal
+        textAlign: center
+      subtitle:
+        fontWeight: 400
+        fontStyle: normal
+        textAlign: center
