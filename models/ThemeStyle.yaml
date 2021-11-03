@@ -244,6 +244,42 @@ fields:
           - label: Large
             value: 9999px
         default: none
+      - type: number
+        name: width
+        label: Border width
+        controlType: 'slider'
+        min: 0
+        max: 10
+        unit: 'px'
+        default: 0
+      - type: enum
+        name: style
+        label: Border style
+        controlType: button-group
+        options:
+          - label: None
+            value: none
+          - label: Solid
+            value: solid
+          - label: Dashed
+            value: dashed
+          - label: Dotted
+            value: dotted
+          - label: Double
+            value: double
+        default: none
+      - type: enum
+        name: shadow
+        label: Shadow
+        controlType: button-group
+        options:
+          - label: None
+            value: 0
+          - label: Mild
+            value: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)
+          - label: Float
+            value: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)
+        default: 0
       - type: enum
         name: case
         label: Case
