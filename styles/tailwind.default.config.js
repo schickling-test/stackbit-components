@@ -67,11 +67,17 @@ module.exports = {
                 addComponents({
                     '.sb-component-button-primary': {
                         borderRadius: '0',
-                        textTransform: 'none'
+                        borderWidth: '0',
+                        borderStyle: 'solid',
+                        textTransform: 'none',
+                        boxShadow: 'none'
                     },
                     '.sb-component-button-secondary': {
                         borderRadius: '0',
-                        textTransform: 'none'
+                        borderWidth: '2px',
+                        borderStyle: 'solid',
+                        textTransform: 'none',
+                        boxShadow: 'none'
                     }
                 });
         })

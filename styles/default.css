@@ -151,7 +151,7 @@
 
     /* Buttons */
     .sb-component-button {
-        @apply border-2 font-medium inline-flex items-center justify-center no-underline px-5 py-2.5 text-center tracking-wider transition duration-200 ease-in hover:opacity-80;
+        @apply font-medium inline-flex items-center justify-center no-underline px-5 py-2.5 text-center tracking-wider transition duration-200 ease-in hover:opacity-80;
     }
 
     /* Links */
