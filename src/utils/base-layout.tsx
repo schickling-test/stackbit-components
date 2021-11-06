@@ -1,6 +1,7 @@
-import * as base from '../base/';
+import React from 'react';
+import * as base from '../base/index.js';
 
-export function getBaseLayoutComponent(pageBaseLayout, siteConfigBaseLayout) {
+export function getBaseLayoutComponent(pageBaseLayout, siteConfigBaseLayout): React.FC<any> {
     let BaseLayout = base.DefaultBaseLayout;
     if (pageBaseLayout) {
         BaseLayout = base[pageBaseLayout];

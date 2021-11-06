@@ -1,5 +1,7 @@
 import * as React from 'react';
-import NextLink from 'next/link';
+import NextLink_ from 'next/link';
+
+const NextLink = (NextLink_ as any).default as typeof NextLink_;
 
 export default function Link({ children, href, ...other }) {
     // Pass Any internal link to Next.js Link, for anything else, use <a> tag

@@ -113,3 +113,7 @@ stackbit-theme.yaml
 src/components-map.json
 src/components-map.ts
 sourcemap.patch
+
+
+# Contentlayer
+.contentlayer

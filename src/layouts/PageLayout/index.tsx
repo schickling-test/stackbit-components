@@ -1,10 +1,17 @@
+import { Config, PageLayout } from '.contentlayer/types';
 import * as React from 'react';
 import { getComponent } from '../../components-registry';
 import { getBaseLayoutComponent } from '../../utils/base-layout';
 
-export default function PageLayout(props) {
+type Props = React.PropsWithChildren<{
+    site: Config;
+    page: PageLayout;
+}>;
+
+export default function PageLayout(props: Props) {
     const { page, site } = props;
-    const BaseLayout = getBaseLayoutComponent(page.baseLayout, site.baseLayout);
+    // const BaseLayout = getBaseLayoutComponent(page.baseLayout, site.baseLayout);
+    const BaseLayout = getBaseLayoutComponent(undefined, undefined);
     const sections = page.sections || [];
 
     return (

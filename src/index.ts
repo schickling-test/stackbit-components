@@ -1,1 +1,1 @@
-export * from './components-registry';
+export * from './components-registry.js';

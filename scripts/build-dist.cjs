@@ -16,7 +16,7 @@ if (args.includes('--clean')) {
 }
 
 generateComponentsMapJSON();
-runTSC();
+// runTSC();
 generateComponentsMapJS();
 generateComponentsMapTS();
 

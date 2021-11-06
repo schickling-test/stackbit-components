@@ -1,6 +1,6 @@
 name: PageLayout
 label: Page
-layout: PageLayout
+type: PageLayout
 hideContent: true
 fields:
   - type: string

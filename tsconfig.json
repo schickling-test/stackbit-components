@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "es2020",
-        "module": "commonjs",
+        "module": "ES2020",
         "lib": ["dom", "dom.iterable", "esnext"],
         "allowJs": true,
         "skipLibCheck": true,
@@ -9,6 +9,8 @@
         "forceConsistentCasingInFileNames": true,
         "incremental": true,
         "declaration": true,
+        // needed for Next.js exports
+        "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "sourceMap": true,
         "declarationMap": true,
@@ -19,13 +21,13 @@
         "outDir": "./dist",
         "tsBuildInfoFile": "./dist/.tsbuildinfo",
         "rootDir": "./src",
-		"baseUrl": ".",
+        "baseUrl": ".",
         "paths": {
-			"next/head": ["node_modules/react-helmet"],
-			"next/dynamic": ["src/storybook-polyfills/next-dynamic"],
-			"next/link": ["src/storybook-polyfills/next-link"]
-		}
+            // "next/head": ["node_modules/react-helmet"],
+            // "next/dynamic": ["src/storybook-polyfills/next-dynamic"],
+            // "next/link": ["src/storybook-polyfills/next-link"]
+        }
     },
     "include": ["src/**/*.ts", "src/**/*.tsx"],
-    "exclude": ["node_modules", "src/**/*.stories.*", "src/storybook-addons/**/*", "src/components-map.ts"]
+    "exclude": ["node_modules", "src/**/*.stories.*", "src/storybook-addons/**/*"]
 }
